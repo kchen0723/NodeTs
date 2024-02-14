@@ -1,5 +1,6 @@
 # Stpes to create nodejs with typescript
 ## "npm init -y" to create a package.json
+## "npm install -g yarn" to install yarn
 ## "tsc --init" to create a tsconfig.json
 ## create a dist and src folders
 ## in src, create a first.ts

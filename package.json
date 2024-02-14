@@ -1,0 +1,23 @@
+{
+  "name": "NodeTs",
+  "version": "1.0.0",
+  "description": "const hello:string = \"hello, world\";   console.log(hello); ## for tsconfig.json, set     \"sourceMap\": true,     \"outDir\": \"dist\",    ## for package.json, add dev devdependencies:     \"typescript\": \"5.3.3\" ## for launch.json for vs code debugging. set   \"program\": \"${workspaceFolder}/dist/first.js\" ## \"yarn install\" to install package ## npx tsc to compile the codes. ## now you can debug it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kchen0723/NodeTs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kchen0723/NodeTs/issues"
+  },
+  "homepage": "https://github.com/kchen0723/NodeTs#readme",
+  "devDependencies": {
+    "typescript": "5.3.3"
+  }
+}
