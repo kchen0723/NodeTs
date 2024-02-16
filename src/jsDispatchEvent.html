@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dom event example</title>
+  </head>
+  <body>
+    <button id="myButton">Click me</button>
+    <script>
+      class MyClass extends EventTarget {
+        constructor(){
+          super();
+        }
+        raiseCustomEvent(){
+          const event = new CustomEvent("myCustomEvent", {
+            detail: {message: "custom event is triggered"},
+            bubbles: true,
+            cancelable: true
+          });
+          this.dispatchEvent(event);
+        }
+      }
+
+      function handleClick(event){
+        myObject.addEventListener("myCustomEvent", function(event){
+          console.log("custom event received", event.detail.message);
+        });
+        myObject.raiseCustomEvent();
+        alert(navigator.appName);
+        event.stopPropagation();
+      }
+
+      var button = document.getElementById("myButton");
+      const myObject = new MyClass();
+      button.addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>
