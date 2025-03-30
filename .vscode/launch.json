@@ -15,6 +15,14 @@
       "outFiles": [
         "${workspaceFolder}/**/*.js"
       ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Jest Tests",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/jest",
+      "args": ["--runInBand"],
+      "console": "integratedTerminal"
     }
   ]
 }

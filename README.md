@@ -16,3 +16,9 @@
 ## "yarn install" to install package
 ## npx tsc to compile the codes.
 ## now you can debug it
+
+#To manually Add jest
+## run npm install --save-dev jest ts-jest @types/jest typescript
+## npx ts-jest config:init
+## update the jest.config.js
+## also you can install jest and jest runner vs code extension.
