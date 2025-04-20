@@ -17,7 +17,7 @@
 ## npx tsc to compile the codes.
 ## now you can debug it
 
-#To manually Add jest
+# To manually Add jest
 ## run yarn add --dev jest ts-jest @types/jest typescript
 ## npx ts-jest config:init
 ## update the jest.config.js
