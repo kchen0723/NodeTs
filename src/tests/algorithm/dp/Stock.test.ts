@@ -24,4 +24,10 @@ describe("Stock", () => {
         var actual = stock.maxPrifitBuyMultipleTimes(prices);
         expect(actual).toBe(7);
     });
+
+    test("maxProfitBuyKTimes", () => {
+        var prices = [7, 1, 5, 3, 6, 4];
+        var actual = stock.maxProfitBuyKTimes(prices, 2);
+        expect(actual).toBe(7);
+    });
 })

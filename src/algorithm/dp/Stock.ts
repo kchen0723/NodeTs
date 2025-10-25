@@ -55,4 +55,33 @@ export class Stock{
         }
         return dp[prices.length - 1][0];
     }
+
+    maxProfitBuyKTimes(prices: number[], k: number): number{
+        if(prices.length < 2){
+            return 0;
+        }
+
+        let holdCash = 0;
+        let holdStock = 0 - prices[0];
+        let dp = Array.from({length: prices.length}, () => {
+            return Array.from({length: k + 1}, () => {
+                return Array(2).fill(0);
+            })
+        });
+        //base case
+        for(let j = 0; j <=k; j++){
+            dp[0][j][0] = holdCash;
+            dp[0][j][1] = holdStock;
+        }
+
+        //transfer
+        for(let i = 1; i < prices.length; i++){
+            for(let j = 1; j <= k; j++){
+                dp[i][j][0] = Math.max(dp[i - 1][j][0], dp[i - 1][j][1] + prices[i]);
+                dp[i][j][1] = Math.max(dp[i - 1][j][1], dp[i - 1][j - 1][0] - prices[i]);
+            }
+        }
+
+        return dp[prices.length - 1][k][0];
+    }
 }
