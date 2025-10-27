@@ -1,4 +1,4 @@
-import { Combination } from "../../../algorithm/dp/CombinationAndPermutation/Combination";  
+import { Combination } from "../../../algorithm/CombinationAndPermutation/Combination";  
 
 describe("Combination", () => {
     let combination : Combination;
