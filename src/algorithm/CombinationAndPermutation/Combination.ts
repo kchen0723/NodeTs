@@ -1,7 +1,7 @@
 export class Combination{
     public GetCombinationFromUniqueArray(nums: number[], k: number): number[][]{
         let result:number[][] = [];
-        if(!nums || nums.length === 0 || k <= 0 || k > nums.length){
+        if(!Array.isArray(nums) || nums.length === 0 || k <= 0 || k > nums.length){
             return result;
         }
 

@@ -6,7 +6,7 @@ export class Stock{
 // # 输入: [7,1,5,3,6,4]
 // # 输出: 5
     maxProfitBuyOnlyOnce(prices: number[]): number {
-        if(prices.length < 2){
+        if(!Array.isArray(prices) || prices.length < 2){
             return 0;
         }
 
@@ -22,7 +22,7 @@ export class Stock{
     }
 
     maxProfitBuyOnlyOnceDp(prices: number[]){
-        if(prices.length < 2){
+        if(!Array.isArray(prices) || prices.length < 2){
             return 0;
         }
 
@@ -40,7 +40,7 @@ export class Stock{
     }
 
     maxPrifitBuyMultipleTimes(prices: number[]){
-        if(prices.length < 2){
+        if(!Array.isArray(prices) || prices.length < 2){
             return 0;
         }
 
@@ -57,7 +57,7 @@ export class Stock{
     }
 
     maxProfitBuyKTimes(prices: number[], k: number): number{
-        if(prices.length < 2){
+        if(!Array.isArray(prices) || prices.length < 2){
             return 0;
         }
 
